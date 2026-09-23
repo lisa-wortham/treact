@@ -146,12 +146,13 @@ p {
 }
 
 #landing .split__container {
+  max-width: 1200px;
   display: grid;
   grid-template-columns: 40% 60%;
   width: 100%;
   align-items: center;
   padding-top: 40px;
-  margin: 0 32px;
+  margin: 0 auto;
 }
 #landing .left__column {
   text-align: center;
@@ -161,29 +162,35 @@ p {
 }
 
 .customer__logo {
-  width: 400px;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+   width: 325px;
+   margin-right: 32px;
 }
 
 .email-box {
   display: flex;
   align-items: center;
-  border: 1px solid #6415ff;
+  border: 2px solid #6415ff;
   border-radius: 25px;
-  padding: 8px 24px;
+  padding: 8px 12px;
   max-width: 400px;
 }
 .email-box input {
   flex: 1;
   border: none;
   outline: none;
-  padding: 10px;
+  padding: 12px;
 }
 
-button {
+button{
+
+  width: auto;
   background-color: #6415ff;
   color: white;
   border: none;
-  padding: 10px 16px;
+  padding:8px 20px;
   border-radius: 25px;
   cursor: pointer;
 }
@@ -196,7 +203,7 @@ button {
 }
 
 #landing .right__column img {
-  width: 100%;
+  width: 90%;
   height: auto;
   display: block;
 }
@@ -419,6 +426,7 @@ button {
 /* VALUES */
 
 .value__split__container {
+  max-width: 1200px;
   display: grid !important;
   grid-template-columns: 50% 50% !important;
   grid-template-rows: auto !important;
@@ -434,6 +442,7 @@ button {
   grid-row: 1 !important;
   min-width: 0;
   display: flex;
+  text-align: center;
 }
 
 .values__title__portion {
@@ -512,6 +521,7 @@ button {
   align-self: flex-start;
   margin-top: 32px;
   margin-left: 0;
+  padding: 8px 24px;
   margin-right: auto;
 }
 
@@ -528,7 +538,7 @@ button {
 
 .value__right__column img {
   display: block;
-  width: 100%;
+  width: 95%;
   max-width: 500px;
   height: auto;
   margin-left: auto;
@@ -687,6 +697,7 @@ button {
 /* ACTION SECTION */
 
 .action__split__row {
+  max-width: 1280px;
   display: grid;
   grid-template-rows: 1fr auto 1fr;
   width: 100%;
@@ -707,13 +718,15 @@ button {
   gap: 40px;
 }
 .action__text {
+  align-items: space-around;
   margin-left: 60px;
 }
 
 .action__buttons {
   display: flex;
   gap: 40px;
-  margin-left: 200px;
+  align-items: space-around;
+  margin-left: 130px;
 }
 .button__started {
   background-color: #ff1515a4;
@@ -790,11 +803,12 @@ button {
 }
 
 .footer__icons {
+  align-items: center;
   display: flex;
   gap: 16px;
   font-size: 30px;
-  margin-right: 60px;
-}
+  margin-right: 100px;
+  }
 
 .footer__icons svg {
   color: white !important;
@@ -1017,15 +1031,23 @@ button {
     text-align: center;
   }
 
-  .step__text {
+
+  .step__title {
     width: 100%;
     max-width: 600px;
-    margin: 0 auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
     text-align: center;
+    flex-wrap: nowrap;
   }
   .step__headline {
-    width: 100%;
-    text-align: center;
+    width: 100% !important;
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    transform: none !important;
+
   }
 
   .step__subtitle {
@@ -1067,6 +1089,14 @@ button {
     width: 100% !important;
     text-align: center !important;
   }
+
+  .value__button {
+    width: auto;
+    padding: 10px 24px;
+    font-size: 14px;
+    display: block;
+    margin: 20px auto; 
+    }
 
   .value__row {
     display: flex;
@@ -1117,8 +1147,18 @@ button {
     max-width: 350px;
     flex: none;
   }
+  .teal__button,
+  .white__button,
+  .red__button {
+    width: auto;
+    padding: 10px 24px;
+    font-size: 14px;
+    display: block;
+    margin: 20px auto;
+  }
 
   .testimonial__split__container {
+    
     display: flex !important;
     flex-direction: column-reverse !important;
     align-items: center !important;
@@ -1223,12 +1263,13 @@ button {
     justify-items: center;
   }
   .footer__column {
-    width: 150px;
+    width: 100%;
     text-align: center;
   }
   .footer__column h3,
   .footer__column a {
-    text-align: left;
+    width: 100%;
+    text-align: center;
   }
   .footer__bottom {
     flex-direction: column;
@@ -1236,7 +1277,16 @@ button {
     gap: 15px;
     text-align: center;
   }
-}
+
+  .footer__icons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 0 auto;
+  }
+ }
 
 @media (max-width: 480px) {
   .container {
@@ -1276,13 +1326,12 @@ button {
   button {
     width: 100%;
   }
-
   .step__title {
     text_align: center;
     width: 100%;
   }
   .step__title .purple {
-    margin-left: 8px;
+    margin-left: 8px
   }
 
   .step__right__column,
